@@ -25,6 +25,7 @@ def main(request):
         rows_to_insert = []
         # Transform Data
         now = datetime.datetime.now()
+        timestamp = now.strftime("%Y-%m-%d %H:%M:%S" )
         for row in data_csv:
             line_count += 1
             if line_count == 1:
@@ -33,11 +34,12 @@ def main(request):
                 data_bigquery = {
                     "age" : row[0],
                     "job" : row[1],
-                    "balance" : row[5]
+                    "balance" : row[5],
+                    "timestamp" : timestamp
                 }
             rows_to_insert.append(data_bigquery)
         # Load in Big Query
-        table_id = "curso-datos-398001.cursodatos.bank"
+        table_id = "curso-datos-398001.cursodatos.bank_partitions"
         client_bigquery = bigquery.Client()
         errors = client_bigquery.insert_rows_json(table_id, rows_to_insert)
         print(errors)
