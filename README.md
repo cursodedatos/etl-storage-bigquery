@@ -25,7 +25,7 @@ curso-datos  > bank
 ## Deployment
 Esta función no se despliega automáticamente
 
-## Rependencias
+## Dependencias
 * functions-framework==3.*
 * google-cloud-bigquery
 * google-cloud-storage

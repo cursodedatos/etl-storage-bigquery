@@ -1,0 +1,6 @@
+.gcloudignore
+.git
+.gitignore
+.github
+*-creds*.json
+README.md
