@@ -37,7 +37,7 @@ def main(request):
                     "balance" : row[5],
                     "timestamp" : timestamp
                 }
-            rows_to_insert.append(data_bigquery)
+                rows_to_insert.append(data_bigquery)
         # Load in Big Query
         table_id = "curso-datos-398001.cursodatos.bank_partitions"
         client_bigquery = bigquery.Client()
