@@ -35,7 +35,7 @@ def main(request):
                     "age" : row[0],
                     "job" : row[1],
                     "balance" : row[5],
-                    "timestamp" : timestamp
+                    "updated" : timestamp
                 }
                 rows_to_insert.append(data_bigquery)
         # Load in Big Query
