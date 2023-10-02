@@ -14,7 +14,7 @@ def main(request):
     try:
         # Extract from Storage
         storage_client = storage.Client()
-        buket_name = 'curso_datos_bucket'
+        buket_name = 'bucket'
         bucket = storage_client.bucket(buket_name)
         blob = bucket.blob('bank.csv')
         file = blob.download_as_text()
@@ -39,7 +39,7 @@ def main(request):
                 }
                 rows_to_insert.append(data_bigquery)
         # Load in Big Query
-        table_id = "curso-datos-398001.cursodatos.bank_partitions"
+        table_id = "xxxx.cursodatos.bank_partitions"
         client_bigquery = bigquery.Client()
         errors = client_bigquery.insert_rows_json(table_id, rows_to_insert)
         print(errors)
