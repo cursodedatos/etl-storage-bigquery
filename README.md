@@ -7,7 +7,7 @@ parsea los datos y los guarda en una table de Bigqeury bank en el conjunto de da
 
 ## Como correr la función 
 ```shell
-curl -X GET  'https://us-central1-curso-datos-398001.cloudfunctions.net/etl-storage-bigquery?key=VALOR-KEY'
+curl -X GET  'https://xxxxx.cloudfunctions.net/etl-storage-bigquery?key=VALOR-KEY'
 ```
 
 
@@ -20,7 +20,7 @@ This function is not scheduled to run automatically
 
 ## Bigquery
 
-curso-datos  > bank
+bucket  > bank
 
 ## Deployment
 Esta función no se despliega automáticamente
